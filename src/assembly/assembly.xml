@@ -36,6 +36,7 @@
             <directory>${project.basedir}/src/main/resources</directory>
             <includes>
                 <include>*.properties</include>
+                <include>*.yml</include>
                 <include>*.xml</include>
             </includes>
             <outputDirectory>/config/</outputDirectory>
