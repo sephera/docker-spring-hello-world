@@ -1,2 +1,16 @@
 language: java
 jdk: oraclejdk8
+
+env:
+  global:
+  - secure: "ne3icAZ7+rjfQQY7dmwB104h05Byjb9DewJVPsdZCMH0sKVXXoQI6WndCE8OFrp3jabuJApAcRST9a5u+xCYzodplVfrIqDm5eSm+iPup6q4JyQtX80jctVqYY5E5RPaLQmpBA/y/dYyCogOkfFTR9lpIEKNBiTVXMHBOd6up2SUWopBoTtRSGxm2JtaQQSWTb1jZyw8DXjb8+N/D4AOLElKtk1dQrQI/E7kBGNQNJAZsx7uyXrI4bxDo6AW8FCQmanB6LgGNgqBATaRyAlRdzFZIihq1Vqi4pEc/mUjBGbPI4dF7hbmumD9NHzjFNCpuHk/Trno5nzuLZE5H2dWqlSpB/EvxIWeCwT/1gAtq+mlVduKAkJbtMaiP87oPkAUczShZjd7pFWqIMlNLNuPIfM9wxP+ZujMV/1yB/nspcxZ7xlI1X09peqs6lNCJHQXnHYhBH0/lze07it5tSprB7MXmGhctu4XdQnyO2mhZroZwYtYrbneRjqFi0bh1UYnYg4bv/Pmpmr3aern2MgvZoKrw0RNaNQtnhWQVScUQVGsvgoDAgfO3t6bQfpuATfm1UgqUyfcoDzXwpJz7fz619MQdEs1DufvgHcNssmuTaICw64ru/nRKmcwzEMpvZvDyNiPrV14pX3EBASxb7MqBG3zrEuWuIa32RI0RZKDQ4I="
+
+addons:
+  sonarcloud:
+    organization: "nduyhai-github"
+    token:
+      secure: $SONAR_TOKEN
+
+script:
+- ./mvnw clean install -B
+- ./mvnw clean package sonar:sonar
