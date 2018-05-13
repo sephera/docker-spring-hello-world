@@ -1,4 +1,4 @@
-# docker-spring-hello-world
+# docker-spring-hello-world [![Build Status](https://travis-ci.org/JustKeepWorking/docker-spring-hello-world.svg?branch=master)](https://travis-ci.org/JustKeepWorking/docker-spring-hello-world)
 
 
 ## Run with docker
